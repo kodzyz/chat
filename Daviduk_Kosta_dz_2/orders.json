@@ -1,0 +1,21 @@
+{"orders": []}{
+    "orders": [
+        {
+            "item": "Xiaomi Redmi 9C",
+            "quantity": 1,
+            "price": 11000,
+            "buyer": "user1",
+            "date": "18.10.2022"
+        }
+    ]
+}{
+    "orders": [
+        {
+            "item": "Xiaomi Redmi 9A",
+            "quantity": 1,
+            "price": 11000,
+            "buyer": "user2",
+            "date": "17.12.2022"
+        }
+    ]
+}
