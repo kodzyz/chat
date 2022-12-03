@@ -7,8 +7,9 @@ from my_func import js_dec, js_enc
 import logging
 
 import threading
-
 import log.client_log_config
+from client_oop import Recept, Send
+
 
 # python3 client.py
 # python3 client.py 127.0.0.8 10000
@@ -16,38 +17,6 @@ import log.client_log_config
 USER = 'client'
 
 LOG = logging.getLogger('client')
-
-
-def send_mess(s, address, port):
-    """режим отправки сообщений"""
-    while True:
-        try:
-            mes = input('Ваше сообщение: ')
-            if mes == 'exit':
-                LOG.error(f'Клиент "{s.fileno()}", {s.getpeername()} отключился')
-                sys.exit(1)
-            message_dict = {
-                "action": "msg",
-                "message": mes
-            }
-            s.send(js_enc(message_dict, USER))
-            LOG.info(f'Отправляем ВАЖНОЕ УВЕДОМЛЕНИЕ пользователям:\n{message_dict}')
-        except:
-            LOG.error(f'Нет соединение с сервером {address}:{port}.')
-            sys.exit(1)
-
-
-def recept_mess(s, address, port):
-    """режим приема сообщений"""
-    while True:
-        try:
-            data = js_dec(s.recv(1024), USER)
-            LOG.info(f'Принято:\n"{pars_listen_to_client(data)}"')
-            print(
-                f'Принято:\n"{pars_listen_to_client(data)}"')
-        except:
-            LOG.error(f'Нет соединение с сервером "{address}:{port}".')
-            sys.exit(1)
 
 
 def createParser():
@@ -109,11 +78,11 @@ def main():
     except ConnectionRefusedError as e1:
         LOG.critical(f'Не удалось подключиться к серверу {address}:{port}: {e1}')
     else:
-        recept = threading.Thread(target=recept_mess, args=(s, address, port))
+        recept = Recept(s, address, port)
         recept.daemon = True
         recept.start()
         LOG.debug('Поток на прием')
-        send = threading.Thread(target=send_mess, args=(s, address, port))
+        send = Send(s, address, port)
         send.daemon = True
         send.start()
         LOG.debug('Поток на отправку')
