@@ -1,0 +1,82 @@
+2022-12-17 21:27:32,885 - DEBUG - server.py - "Старт сервера" 
+2022-12-17 21:27:32,915 - INFO - server_oop.py - Запуск - Порт: "7777". Адрес: "127.0.0.1" 
+2022-12-17 21:27:55,999 - INFO - server_oop.py - Запуск - Соединение по адресу "('127.0.0.1', 51076)" 
+2022-12-17 21:27:56,199 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:27:56,200 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'presence', 'time': 1671301675, 'type': 'status', 'user': {'account_name': 'pa'}} 
+2022-12-17 21:27:56,229 - INFO - server_oop.py - Обработчик - "OK" ответ сервера клиенту "pa" 
+2022-12-17 21:27:56,229 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:28:00,123 - INFO - server_oop.py - Запуск - Соединение по адресу "('127.0.0.1', 57054)" 
+2022-12-17 21:28:00,323 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:28:00,324 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'presence', 'time': 1671301680, 'type': 'status', 'user': {'account_name': 'ko'}} 
+2022-12-17 21:28:00,344 - INFO - server_oop.py - Обработчик - "OK" ответ сервера клиенту "ko" 
+2022-12-17 21:28:00,345 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:28:06,831 - INFO - server_oop.py - Запуск - Соединение по адресу "('127.0.0.1', 57060)" 
+2022-12-17 21:28:07,032 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:28:07,032 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'presence', 'time': 1671301686, 'type': 'status', 'user': {'account_name': 'ra'}} 
+2022-12-17 21:28:07,049 - INFO - server_oop.py - Обработчик - "OK" ответ сервера клиенту "ra" 
+2022-12-17 21:28:07,049 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:28:10,333 - INFO - server_oop.py - Запуск - Соединение по адресу "('127.0.0.1', 51316)" 
+2022-12-17 21:28:10,533 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:28:10,534 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'presence', 'time': 1671301690, 'type': 'status', 'user': {'account_name': 'ma'}} 
+2022-12-17 21:28:10,549 - INFO - server_oop.py - Обработчик - "OK" ответ сервера клиенту "ma" 
+2022-12-17 21:28:10,549 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:28:32,784 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:28:32,784 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'get_contacts', 'time': 1671301712, 'user_login': 'pa'} 
+2022-12-17 21:28:32,792 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:28:32,792 - INFO - server_oop.py - Обработчик - Список контактов пользователя "pa": [] 
+2022-12-17 21:28:45,213 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:28:45,214 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'add_contact', 'user_id': 'ko', 'time': 1671301725, 'user_login': 'pa'} 
+2022-12-17 21:28:45,227 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:28:45,228 - INFO - server_oop.py - ko добавлен в список контактов pa 
+2022-12-17 21:28:58,251 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:28:58,251 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'add_contact', 'user_id': 'ma', 'time': 1671301738, 'user_login': 'pa'} 
+2022-12-17 21:28:58,264 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:28:58,264 - INFO - server_oop.py - ma добавлен в список контактов pa 
+2022-12-17 21:29:05,876 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:29:05,876 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'get_contacts', 'time': 1671301745, 'user_login': 'pa'} 
+2022-12-17 21:29:05,885 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:29:05,885 - INFO - server_oop.py - Обработчик - Список контактов пользователя "pa": ['ko', 'ma'] 
+2022-12-17 21:29:16,503 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:29:16,504 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'del_contact', 'user_id': 'ma', 'time': 1671301756, 'user_login': 'pa'} 
+2022-12-17 21:29:16,517 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:29:16,517 - INFO - server_oop.py - ma удален из списка контактов pa 
+2022-12-17 21:29:22,928 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:29:22,928 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'get_contacts', 'time': 1671301762, 'user_login': 'pa'} 
+2022-12-17 21:29:22,933 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:29:22,934 - INFO - server_oop.py - Обработчик - Список контактов пользователя "pa": ['ko'] 
+2022-12-17 21:30:08,813 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:30:08,813 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'message', 'time': 1671301808, 'from': 'ra', 'to': 'ma', 'message': 'solved the homework'} 
+2022-12-17 21:30:08,814 - DEBUG - server_oop.py - Обработчик - Запоминаем сообщение: {'action': 'message', 'time': 1671301808, 'from': 'ra', 'to': 'ma', 'message': 'solved the homework'}" 
+2022-12-17 21:30:08,827 - INFO - server_oop.py - write_clients 
+2022-12-17 21:30:08,827 - INFO - server_oop.py - Ответ сервера - "ra" пишет "ma": {'action': 'message', 'time': 1671301808, 'from': 'ra', 'to': 'ma', 'message': 'solved the homework'} 
+2022-12-17 21:30:08,827 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:30:26,857 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:30:26,858 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'message', 'time': 1671301826, 'from': 'ma', 'to': 'ra', 'message': 'no and you'} 
+2022-12-17 21:30:26,858 - DEBUG - server_oop.py - Обработчик - Запоминаем сообщение: {'action': 'message', 'time': 1671301826, 'from': 'ma', 'to': 'ra', 'message': 'no and you'}" 
+2022-12-17 21:30:26,864 - INFO - server_oop.py - write_clients 
+2022-12-17 21:30:26,864 - INFO - server_oop.py - Ответ сервера - "ma" пишет "ra": {'action': 'message', 'time': 1671301826, 'from': 'ma', 'to': 'ra', 'message': 'no and you'} 
+2022-12-17 21:30:26,864 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:30:49,902 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:30:49,903 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'message', 'time': 1671301849, 'from': 'ra', 'to': 'ma', 'message': "I didn't decide either"} 
+2022-12-17 21:30:49,903 - DEBUG - server_oop.py - Обработчик - Запоминаем сообщение: {'action': 'message', 'time': 1671301849, 'from': 'ra', 'to': 'ma', 'message': "I didn't decide either"}" 
+2022-12-17 21:30:49,906 - INFO - server_oop.py - write_clients 
+2022-12-17 21:30:49,906 - INFO - server_oop.py - Ответ сервера - "ra" пишет "ma": {'action': 'message', 'time': 1671301849, 'from': 'ra', 'to': 'ma', 'message': "I didn't decide either"} 
+2022-12-17 21:30:49,906 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:31:04,530 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:31:04,530 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'message', 'time': 1671301864, 'from': 'ma', 'to': 'ra', 'message': 'what will do'} 
+2022-12-17 21:31:04,531 - DEBUG - server_oop.py - Обработчик - Запоминаем сообщение: {'action': 'message', 'time': 1671301864, 'from': 'ma', 'to': 'ra', 'message': 'what will do'}" 
+2022-12-17 21:31:04,534 - INFO - server_oop.py - write_clients 
+2022-12-17 21:31:04,534 - INFO - server_oop.py - Ответ сервера - "ma" пишет "ra": {'action': 'message', 'time': 1671301864, 'from': 'ma', 'to': 'ra', 'message': 'what will do'} 
+2022-12-17 21:31:04,534 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-17 21:31:53,219 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:31:53,219 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'exit', 'time': 1671301913, 'account_name': 'ma'} 
+2022-12-17 21:31:53,219 - INFO - server_oop.py - Обработчик - "exit" clients: ma 
+2022-12-17 21:31:57,426 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:31:57,426 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'exit', 'time': 1671301917, 'account_name': 'ra'} 
+2022-12-17 21:31:57,426 - INFO - server_oop.py - Обработчик - "exit" clients: ra 
+2022-12-17 21:32:01,633 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:32:01,634 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'exit', 'time': 1671301921, 'account_name': 'ko'} 
+2022-12-17 21:32:01,634 - INFO - server_oop.py - Обработчик - "exit" clients: ko 
+2022-12-17 21:32:06,242 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-17 21:32:06,242 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'exit', 'time': 1671301926, 'account_name': 'pa'} 
+2022-12-17 21:32:06,243 - INFO - server_oop.py - Обработчик - "exit" clients: pa 
