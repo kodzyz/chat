@@ -6,10 +6,12 @@ import argparse
 from my_func import js_dec, js_enc
 import logging
 from client_d_b import ClientBase
-
+from PyQt5.QtWidgets import QApplication
 import threading
 import log.client_log_config
 from client_oop import Recept, Send
+from client.start_dialog import UserNameDialog
+from client.main_window import ClientMainWindow
 
 # python3 client.py
 # python3 client.py 127.0.0.8 10000
@@ -55,9 +57,20 @@ def main():
         LOG.critical(f'Недопустимый порт "{port}". Допустимы порты с 1024 до 65535.')
         sys.exit(1)
 
-    user = input('Введите login: ')
-    if user == '':
-        user = 'visitor'
+    # Создаём клиентокое приложение
+    client_app = QApplication(sys.argv)
+    start_dialog = UserNameDialog()
+    client_app.exec_()
+    # Если пользователь ввёл имя и нажал ОК, то сохраняем ведённое и удаляем объект, инааче выходим
+    if start_dialog.ok_pressed:
+        user = start_dialog.client_name.text()
+        del start_dialog
+    else:
+        exit(0)
+
+    # user = input('Введите login: ')
+    # if user == '':
+    # user = 'visitor'
 
     LOG.info(f'Порт сервера: "{port}". Адрес сервера: "{address}". login: {user}')
     try:
@@ -73,15 +86,21 @@ def main():
     except ConnectionRefusedError as e1:
         LOG.critical(f'Не удалось подключиться к серверу {address}:{port}: {e1}')
     else:
-        db = ClientBase()
-        recept = Recept(s, address, port, user, db)
+        # Создаём объект базы данных
+        db_client = ClientBase()
+        recept = Recept(s, address, port, user, db_client)
         recept.daemon = True
         recept.start()
         LOG.debug('Поток на прием')
-        send = Send(s, address, port, user, db)
+        send = Send(s, address, port, user, db_client)
         send.daemon = True
         send.start()
         LOG.debug('Поток на отправку')
+
+        # Создаём GUI
+        main_window = ClientMainWindow(db_client, recept, send, user)
+        main_window.setWindowTitle(f'Чат "{user}"')
+        client_app.exec_()
 
     while True:
         time.sleep(1)

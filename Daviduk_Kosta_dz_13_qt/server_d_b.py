@@ -117,6 +117,8 @@ class ServerBase:
             client_login_query = self.session.query(self.Client.login).filter(self.Client.id == client_id)
             for clear_log in client_login_query:
                 list_client_login.append(clear_log[0])
+        if not list_client_login:
+            return 400
         return list_client_login
 
     def add_contact(self, owner, add_contact):
@@ -132,8 +134,8 @@ class ServerBase:
                 owner_id = self.session.query(self.Contacts.owner_id)
                 client_id = self.session.query(self.Contacts.client_id)
                 # если "add_contact_id" уже есть у "contact_owner_id"(табл.Contacts) => return
-                if ([True for i in owner_id.all() if i[0] == contact_owner_id] and [True for i in client_id.all() if
-                                                                                    i[0] == add_contact_id]):
+                if ([True for i in owner_id.all() if i[0] == contact_owner_id] and
+                        [True for i in client_id.all() if i[0] == add_contact_id]):
                     return
                 contacts = self.Contacts(owner_id=contact_owner_id, client_id=add_contact_id)
 
@@ -160,9 +162,13 @@ class ServerBase:
                     self.session.commit()
                 return
 
+    def get_users(self):
+        return [user[0] for user in self.session.query(self.Client.login).all()]
 
-# client = ServerBase()
-# a = client.get_contacts("ko")
+
+client = ServerBase()
+#
+#a = client.get_users()
 # print(a)
 # client.del_contact("ko", "pa")
 # b = client.get_contacts("ko")
