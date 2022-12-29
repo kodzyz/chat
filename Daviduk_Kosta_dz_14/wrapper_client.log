@@ -1,0 +1,16 @@
+2022-12-29 15:58:17,176  Запись в JSON-файл 
+2022-12-29 15:58:17,176 ("Функция: js_enc(({'action': 'presence', 'time': 1672318697, 'type': 'status', 'user': {'account_name': 'ko'}, 'pubkey': '-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApV+tWNfimzWrgbsMuPpY\\nKus3EwBiVTzlvA1PXCwBPQJcqpXLvEI0UhBoWIZfJJfZ5NRsgh7TbK6ULfyoO1IC\\ntiUAm2uhTOYQ5IyFg/JafNb/+9p8kfqSXYaR3Bi91rXI9dL4iRvjI11maD3M1XmD\\nAh7jKPMNVgefQtvpIpZfCXkyfgREN+4kVCkK9coVlVleWMupD1JdwWm53+zdDXgm\\n9bW7mdcfVX7UOpGyR53MqjdUXsDDQ0pSCOkmt6nOHKlfjvSB8cMKTntvwKac2JP6\\nzRzOtY3Z8VQ2lhjC/AZz/+qDJyqVPeoZyZXOtMisI0S8/ju5iNp89RvTeRmODs3x\\n8wIDAQAB\\n-----END PUBLIC KEY-----'}, 'client'), {})", 'Вызвана из функции: "main"')
+2022-12-29 15:58:17,280  Чтение JSON-файла 
+2022-12-29 15:58:17,280 ('Функция: js_dec((b\'{"response": 511, "alert": "7b47c3691d6edc229122215a81d115243f46b4f6e8eb0f94130a24b44df0157ea2cc9aa45b051d9d20652830c9bea08952f3fb0cf765ae165b2375857de4c620"}\', \'client\'), {})', 'Вызвана из функции: "client_authenticate"')
+2022-12-29 15:58:17,280  Запись в JSON-файл 
+2022-12-29 15:58:17,281 ("Функция: js_enc(({'response': 511, 'alert': 'WnadvKS8JGvXtw6KqMzlaA==\\n'}, 'client'), {})", 'Вызвана из функции: "client_authenticate"')
+2022-12-29 15:58:17,305  Чтение JSON-файла 
+2022-12-29 15:58:17,305 ('Функция: js_dec((b\'{"response": 200}\', \'client\'), {})', 'Вызвана из функции: "main"')
+2022-12-29 15:58:29,381  Запись в JSON-файл 
+2022-12-29 15:58:29,381 ("Функция: js_enc(({'action': 'presence', 'time': 1672318709, 'type': 'status', 'user': {'account_name': 'pa'}, 'pubkey': '-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA176+adLxUp7ki2kcQsSH\\nHueGX3+E8iVULTeKmiuRuMrALEpHBGG2vy1KdUGx2zmNpOkP3IdchXm4Q3Ry9zNA\\nMdu9Br7O23DzklXaudcLoRs0Lc7QN6ATD2HdCwZtvQabqYlFOSiA7/TnrSaM3zFm\\nZ/n+w/pIl1jylXAw7mn8JHDIuwsQGC7NfN+d5Ojek/ZFqbW1iU6CSJ4I545xGppE\\nY8YoL+WAIjiF+zI7D9Bqlf6F/PY2w6VWRS7jxxjOR5UaR3gN/9EJTqUfhREN0wbD\\n6W809xmivPjjJFt5679lHdGbIRS1F3LuRF20W7rPZGNL1gpQ9mIdglxoGtbP400o\\nywIDAQAB\\n-----END PUBLIC KEY-----'}, 'client'), {})", 'Вызвана из функции: "main"')
+2022-12-29 15:58:29,477  Чтение JSON-файла 
+2022-12-29 15:58:29,477 ('Функция: js_dec((b\'{"response": 511, "alert": "ab74bbcf3c21d1dbabd3d0947dd43efd1493e51ace71e48b7b8103921da40c73c4d4c163f274fd2e4213fbc2d17828f16a7544314a9c409723560ad3e0548607"}\', \'client\'), {})', 'Вызвана из функции: "client_authenticate"')
+2022-12-29 15:58:29,478  Запись в JSON-файл 
+2022-12-29 15:58:29,478 ("Функция: js_enc(({'response': 511, 'alert': 'iIwPTys5jbdtqF0xsTSJ9A==\\n'}, 'client'), {})", 'Вызвана из функции: "client_authenticate"')
+2022-12-29 15:58:29,498  Чтение JSON-файла 
+2022-12-29 15:58:29,498 ('Функция: js_dec((b\'{"response": 200}\', \'client\'), {})', 'Вызвана из функции: "main"')

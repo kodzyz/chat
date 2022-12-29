@@ -1,0 +1,86 @@
+2022-12-29 15:58:09,529 - DEBUG - client.py - "Запущен клиент" 
+2022-12-29 15:58:17,074 - INFO - client.py - Порт сервера: "7777". Адрес сервера: "127.0.0.1", login: ko, passwd: 123 
+2022-12-29 15:58:17,180 - DEBUG - my_func.py - Функция кодирует сообщение пользователю 
+2022-12-29 15:58:17,280 - DEBUG - my_func.py - Функция декодирует сообщение пользователю 
+2022-12-29 15:58:17,280 - DEBUG - client.py - Авторизация - HMAC-функция клиент = b'WnadvKS8JGvXtw6KqMzlaA==\n' 
+2022-12-29 15:58:17,281 - DEBUG - my_func.py - Функция кодирует сообщение пользователю 
+2022-12-29 15:58:17,305 - DEBUG - my_func.py - Функция декодирует сообщение пользователю 
+2022-12-29 15:58:17,305 - INFO - client.py - Ответ сервера: "response: 200" 
+2022-12-29 15:58:17,320 - DEBUG - client.py - Поток на прием 
+2022-12-29 15:58:17,320 - DEBUG - client.py - Поток на отправку 
+2022-12-29 15:58:17,327 - DEBUG - client_oop.py - JSON - кодирует сообщение пользователю 
+2022-12-29 15:58:17,327 - INFO - client_oop.py - Отправка - Получение списка контактов: {'action': 'get_contacts', 'time': 1672318697, 'user_login': 'ko'} 
+2022-12-29 15:58:18,321 - DEBUG - client_oop.py - JSON - декодирует сообщение от пользователя 
+2022-12-29 15:58:23,016 - DEBUG - client.py - "Запущен клиент" 
+2022-12-29 15:58:29,273 - INFO - client.py - Порт сервера: "7777". Адрес сервера: "127.0.0.1", login: pa, passwd: 123 
+2022-12-29 15:58:29,382 - DEBUG - my_func.py - Функция кодирует сообщение пользователю 
+2022-12-29 15:58:29,477 - DEBUG - my_func.py - Функция декодирует сообщение пользователю 
+2022-12-29 15:58:29,478 - DEBUG - client.py - Авторизация - HMAC-функция клиент = b'iIwPTys5jbdtqF0xsTSJ9A==\n' 
+2022-12-29 15:58:29,478 - DEBUG - my_func.py - Функция кодирует сообщение пользователю 
+2022-12-29 15:58:29,498 - DEBUG - my_func.py - Функция декодирует сообщение пользователю 
+2022-12-29 15:58:29,498 - INFO - client.py - Ответ сервера: "response: 200" 
+2022-12-29 15:58:29,510 - DEBUG - client.py - Поток на прием 
+2022-12-29 15:58:29,510 - DEBUG - client.py - Поток на отправку 
+2022-12-29 15:58:29,515 - DEBUG - client_oop.py - JSON - кодирует сообщение пользователю 
+2022-12-29 15:58:29,515 - INFO - client_oop.py - Отправка - Получение списка контактов: {'action': 'get_contacts', 'time': 1672318709, 'user_login': 'pa'} 
+2022-12-29 15:58:30,511 - DEBUG - client_oop.py - JSON - декодирует сообщение от пользователя 
+2022-12-29 15:58:48,775 - DEBUG - client_oop.py - JSON - кодирует сообщение пользователю 
+2022-12-29 15:58:48,776 - INFO - client_oop.py - Отправка - Добавление контакта в список контактов: {'action': 'add_contact', 'user_id': 'pa', 'time': 1672318728, 'user_login': 'ko'} 
+2022-12-29 15:58:48,947 - DEBUG - client_oop.py - JSON - декодирует сообщение от пользователя 
+2022-12-29 15:58:48,947 - INFO - client_oop.py - pa добавлен в список контактов ko 
+2022-12-29 15:58:49,777 - DEBUG - client_oop.py - JSON - кодирует сообщение пользователю 
+2022-12-29 15:58:49,778 - INFO - client_oop.py - Отправка - Получение списка контактов: {'action': 'get_contacts', 'time': 1672318729, 'user_login': 'ko'} 
+2022-12-29 15:58:49,956 - DEBUG - client_oop.py - JSON - декодирует сообщение от пользователя 
+2022-12-29 15:58:49,957 - INFO - client_oop.py - Список контактов: "['pa']" 
+2022-12-29 15:58:55,216 - DEBUG - client_oop.py - JSON - кодирует сообщение пользователю 
+2022-12-29 15:58:55,216 - INFO - client_oop.py - Отправка - Добавление контакта в список контактов: {'action': 'add_contact', 'user_id': 'ko', 'time': 1672318735, 'user_login': 'pa'} 
+2022-12-29 15:58:55,379 - DEBUG - client_oop.py - JSON - декодирует сообщение от пользователя 
+2022-12-29 15:58:55,379 - INFO - client_oop.py - ko добавлен в список контактов pa 
+2022-12-29 15:58:56,217 - DEBUG - client_oop.py - JSON - кодирует сообщение пользователю 
+2022-12-29 15:58:56,218 - INFO - client_oop.py - Отправка - Получение списка контактов: {'action': 'get_contacts', 'time': 1672318736, 'user_login': 'pa'} 
+2022-12-29 15:58:56,388 - DEBUG - client_oop.py - JSON - декодирует сообщение от пользователя 
+2022-12-29 15:58:56,389 - INFO - client_oop.py - Список контактов: "['ko']" 
+2022-12-29 15:58:58,866 - DEBUG - client_oop.py - JSON - кодирует сообщение пользователю 
+2022-12-29 15:58:58,996 - DEBUG - client_oop.py - JSON - декодирует сообщение от пользователя 
+2022-12-29 15:58:59,868 - DEBUG - main_chat.py - CHAT: Загружен открытый ключ -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA176+adLxUp7ki2kcQsSH
+HueGX3+E8iVULTeKmiuRuMrALEpHBGG2vy1KdUGx2zmNpOkP3IdchXm4Q3Ry9zNA
+Mdu9Br7O23DzklXaudcLoRs0Lc7QN6ATD2HdCwZtvQabqYlFOSiA7/TnrSaM3zFm
+Z/n+w/pIl1jylXAw7mn8JHDIuwsQGC7NfN+d5Ojek/ZFqbW1iU6CSJ4I545xGppE
+Y8YoL+WAIjiF+zI7D9Bqlf6F/PY2w6VWRS7jxxjOR5UaR3gN/9EJTqUfhREN0wbD
+6W809xmivPjjJFt5679lHdGbIRS1F3LuRF20W7rPZGNL1gpQ9mIdglxoGtbP400o
+ywIDAQAB
+-----END PUBLIC KEY----- 
+2022-12-29 15:59:01,436 - DEBUG - client_oop.py - JSON - кодирует сообщение пользователю 
+2022-12-29 15:59:01,605 - DEBUG - client_oop.py - JSON - декодирует сообщение от пользователя 
+2022-12-29 15:59:02,437 - DEBUG - main_chat.py - CHAT: Загружен открытый ключ -----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApV+tWNfimzWrgbsMuPpY
+Kus3EwBiVTzlvA1PXCwBPQJcqpXLvEI0UhBoWIZfJJfZ5NRsgh7TbK6ULfyoO1IC
+tiUAm2uhTOYQ5IyFg/JafNb/+9p8kfqSXYaR3Bi91rXI9dL4iRvjI11maD3M1XmD
+Ah7jKPMNVgefQtvpIpZfCXkyfgREN+4kVCkK9coVlVleWMupD1JdwWm53+zdDXgm
+9bW7mdcfVX7UOpGyR53MqjdUXsDDQ0pSCOkmt6nOHKlfjvSB8cMKTntvwKac2JP6
+zRzOtY3Z8VQ2lhjC/AZz/+qDJyqVPeoZyZXOtMisI0S8/ju5iNp89RvTeRmODs3x
+8wIDAQAB
+-----END PUBLIC KEY----- 
+2022-12-29 15:59:27,512 - DEBUG - main_chat.py - CHAT: сообщение до шифрования - првиет ра 
+2022-12-29 15:59:27,516 - DEBUG - main_chat.py - CHAT: зашифрованное сообщение для отправки - Wj6zoCXE3VnPsCa0EFO6AyvKk9XIh+JIqCX+3HXPmVyA7G2AYnq/iW3KJcSlAX6jJbCzCYrcY74X33YyXZbNtbGr1vW8pLtrmD4Ya9hze3CccfLazW4PTo1TB7m9rCOFx0fDE0y13KTWgKCMraCVl75e3z0HhKNsJbASc7lUbHZaGaa8G/es1BLYH3UCWXIpHcFmWIWsXzaWUvaVm2udv/l7GHOKHQ+fEHmL16I9GtEXs6VUjqNfa2yLA/i38oE94C4ac165qzYMN9elOgOuWjc0faMkxMBVQ1GEKEd75nPu/N1jBQlUW3NFR85GHFFLY8ElGjwU++hiSuh33JjqUQ== 
+2022-12-29 15:59:27,516 - DEBUG - client_oop.py - JSON - кодирует сообщение пользователю 
+2022-12-29 15:59:27,517 - INFO - client_oop.py - Отправка - "ko" пишет "pa": {'action': 'message', 'time': 1672318767, 'from': 'ko', 'to': 'pa', 'message': 'Wj6zoCXE3VnPsCa0EFO6AyvKk9XIh+JIqCX+3HXPmVyA7G2AYnq/iW3KJcSlAX6jJbCzCYrcY74X33YyXZbNtbGr1vW8pLtrmD4Ya9hze3CccfLazW4PTo1TB7m9rCOFx0fDE0y13KTWgKCMraCVl75e3z0HhKNsJbASc7lUbHZaGaa8G/es1BLYH3UCWXIpHcFmWIWsXzaWUvaVm2udv/l7GHOKHQ+fEHmL16I9GtEXs6VUjqNfa2yLA/i38oE94C4ac165qzYMN9elOgOuWjc0faMkxMBVQ1GEKEd75nPu/N1jBQlUW3NFR85GHFFLY8ElGjwU++hiSuh33JjqUQ=='} 
+2022-12-29 15:59:27,660 - DEBUG - client_oop.py - JSON - декодирует сообщение от пользователя 
+2022-12-29 15:59:27,660 - INFO - client_oop.py - Прием - "pa" принял от "ko":
+Wj6zoCXE3VnPsCa0EFO6AyvKk9XIh+JIqCX+3HXPmVyA7G2AYnq/iW3KJcSlAX6jJbCzCYrcY74X33YyXZbNtbGr1vW8pLtrmD4Ya9hze3CccfLazW4PTo1TB7m9rCOFx0fDE0y13KTWgKCMraCVl75e3z0HhKNsJbASc7lUbHZaGaa8G/es1BLYH3UCWXIpHcFmWIWsXzaWUvaVm2udv/l7GHOKHQ+fEHmL16I9GtEXs6VUjqNfa2yLA/i38oE94C4ac165qzYMN9elOgOuWjc0faMkxMBVQ1GEKEd75nPu/N1jBQlUW3NFR85GHFFLY8ElGjwU++hiSuh33JjqUQ== 
+2022-12-29 15:59:27,660 - DEBUG - main_chat.py - CHAT: принятое сообщение для дешифровки - {'action': 'message', 'time': 1672318767, 'from': 'ko', 'to': 'pa', 'message': 'Wj6zoCXE3VnPsCa0EFO6AyvKk9XIh+JIqCX+3HXPmVyA7G2AYnq/iW3KJcSlAX6jJbCzCYrcY74X33YyXZbNtbGr1vW8pLtrmD4Ya9hze3CccfLazW4PTo1TB7m9rCOFx0fDE0y13KTWgKCMraCVl75e3z0HhKNsJbASc7lUbHZaGaa8G/es1BLYH3UCWXIpHcFmWIWsXzaWUvaVm2udv/l7GHOKHQ+fEHmL16I9GtEXs6VUjqNfa2yLA/i38oE94C4ac165qzYMN9elOgOuWjc0faMkxMBVQ1GEKEd75nPu/N1jBQlUW3NFR85GHFFLY8ElGjwU++hiSuh33JjqUQ=='} 
+2022-12-29 15:59:27,669 - DEBUG - main_chat.py - CHAT: расшифрованное сообщение - првиет ра 
+2022-12-29 15:59:28,816 - DEBUG - main_chat.py - CHAT: сообщение до шифрования - привет ко 
+2022-12-29 15:59:28,819 - DEBUG - main_chat.py - CHAT: зашифрованное сообщение для отправки - ZXedTXH6LuUkhUmuKVAgDZgNFrTcni2pV0z/arlwWp1Nm+Ex7on30aOiN5mr9ZqBmab4l7SS/Jks39alCCj7y0M7gjqeNGBHNG73/XnCHnkbo3aiPoqN3Ewd7Z19kCKcCCQW7RD9XyL4nID8rdPp987TDUcEV/T+zeO32O4tao6sjk+b+PJU+KIBi0aH3aucgJLELl2Tgg0UqqCD2FuSV6YAfIttAanrQrtizcO1U5kr3dgYhP97tFtAK/76h9qKAypo0KhI0rkq1Tcy0XD+sG791hJVUxjCWCeVvcEjcfJNKFYYvbwZYW9Fn6YKK8sB0D68/ijwflusdijzHp3eCA== 
+2022-12-29 15:59:28,819 - DEBUG - client_oop.py - JSON - кодирует сообщение пользователю 
+2022-12-29 15:59:28,819 - INFO - client_oop.py - Отправка - "pa" пишет "ko": {'action': 'message', 'time': 1672318768, 'from': 'pa', 'to': 'ko', 'message': 'ZXedTXH6LuUkhUmuKVAgDZgNFrTcni2pV0z/arlwWp1Nm+Ex7on30aOiN5mr9ZqBmab4l7SS/Jks39alCCj7y0M7gjqeNGBHNG73/XnCHnkbo3aiPoqN3Ewd7Z19kCKcCCQW7RD9XyL4nID8rdPp987TDUcEV/T+zeO32O4tao6sjk+b+PJU+KIBi0aH3aucgJLELl2Tgg0UqqCD2FuSV6YAfIttAanrQrtizcO1U5kr3dgYhP97tFtAK/76h9qKAypo0KhI0rkq1Tcy0XD+sG791hJVUxjCWCeVvcEjcfJNKFYYvbwZYW9Fn6YKK8sB0D68/ijwflusdijzHp3eCA=='} 
+2022-12-29 15:59:28,865 - DEBUG - client_oop.py - JSON - декодирует сообщение от пользователя 
+2022-12-29 15:59:28,865 - INFO - client_oop.py - Прием - "ko" принял от "pa":
+ZXedTXH6LuUkhUmuKVAgDZgNFrTcni2pV0z/arlwWp1Nm+Ex7on30aOiN5mr9ZqBmab4l7SS/Jks39alCCj7y0M7gjqeNGBHNG73/XnCHnkbo3aiPoqN3Ewd7Z19kCKcCCQW7RD9XyL4nID8rdPp987TDUcEV/T+zeO32O4tao6sjk+b+PJU+KIBi0aH3aucgJLELl2Tgg0UqqCD2FuSV6YAfIttAanrQrtizcO1U5kr3dgYhP97tFtAK/76h9qKAypo0KhI0rkq1Tcy0XD+sG791hJVUxjCWCeVvcEjcfJNKFYYvbwZYW9Fn6YKK8sB0D68/ijwflusdijzHp3eCA== 
+2022-12-29 15:59:28,865 - DEBUG - main_chat.py - CHAT: принятое сообщение для дешифровки - {'action': 'message', 'time': 1672318768, 'from': 'pa', 'to': 'ko', 'message': 'ZXedTXH6LuUkhUmuKVAgDZgNFrTcni2pV0z/arlwWp1Nm+Ex7on30aOiN5mr9ZqBmab4l7SS/Jks39alCCj7y0M7gjqeNGBHNG73/XnCHnkbo3aiPoqN3Ewd7Z19kCKcCCQW7RD9XyL4nID8rdPp987TDUcEV/T+zeO32O4tao6sjk+b+PJU+KIBi0aH3aucgJLELl2Tgg0UqqCD2FuSV6YAfIttAanrQrtizcO1U5kr3dgYhP97tFtAK/76h9qKAypo0KhI0rkq1Tcy0XD+sG791hJVUxjCWCeVvcEjcfJNKFYYvbwZYW9Fn6YKK8sB0D68/ijwflusdijzHp3eCA=='} 
+2022-12-29 15:59:28,870 - DEBUG - main_chat.py - CHAT: расшифрованное сообщение - привет ко 
+2022-12-29 15:59:55,132 - DEBUG - client_oop.py - JSON - кодирует сообщение пользователю 
+2022-12-29 15:59:55,133 - INFO - client_oop.py - Отправка - "EXIT ko": {'action': 'exit', 'time': 1672318795, 'account_name': 'ko'} 
+2022-12-29 15:59:55,512 - DEBUG - client_oop.py - JSON - декодирует сообщение от пользователя 
+2022-12-29 16:00:02,481 - DEBUG - client_oop.py - JSON - декодирует сообщение от пользователя 
