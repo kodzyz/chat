@@ -1,0 +1,81 @@
+2022-12-29 15:57:18,244 - DEBUG - server.py - "Старт сервера" 
+2022-12-29 15:57:18,278 - INFO - server_oop.py - Запуск - Порт: "7777". Адрес: "127.0.0.1" 
+2022-12-29 15:57:33,341 - DEBUG - add_user.py - "Регистрация - Успех" - имя: "ko" 
+2022-12-29 15:57:33,341 - DEBUG - add_user.py - "Хэш пароля: "b'453aba6b0b321e88498779df2c7ac055939f86354520e61bfd084ea1c5eec8bdcb21e0b7ae072d5863b19e775706be713f9671b56066170a9d3d3f0327afd8c6'" 
+2022-12-29 15:57:45,636 - DEBUG - add_user.py - "Регистрация - Успех" - имя: "pa" 
+2022-12-29 15:57:45,636 - DEBUG - add_user.py - "Хэш пароля: "b'7b98e0fc21661ef519fe3b2392795a7abc7dc185c6d0d7b0b478edbb910e20f470e1e559da4e1f82e058ff9396811d92a2cd76b77c6886cd8e86325291bea648'" 
+2022-12-29 15:57:59,234 - DEBUG - add_user.py - "Регистрация - Успех" - имя: "ma" 
+2022-12-29 15:57:59,234 - DEBUG - add_user.py - "Хэш пароля: "b'32fa0820811925db2aea3e0e4e044abc9cacd7e6ea68ea32d6d3beae49d3d626916bc47d334f370173dcffca002b90e4838638d1ef3890102b16b00ed4d4ca3a'" 
+2022-12-29 15:58:17,075 - INFO - server_oop.py - Запуск - Соединение по адресу "('127.0.0.1', 37366)" 
+2022-12-29 15:58:17,275 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:58:17,276 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'presence', 'time': 1672318697, 'type': 'status', 'user': {'account_name': 'ko'}, 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApV+tWNfimzWrgbsMuPpY\nKus3EwBiVTzlvA1PXCwBPQJcqpXLvEI0UhBoWIZfJJfZ5NRsgh7TbK6ULfyoO1IC\ntiUAm2uhTOYQ5IyFg/JafNb/+9p8kfqSXYaR3Bi91rXI9dL4iRvjI11maD3M1XmD\nAh7jKPMNVgefQtvpIpZfCXkyfgREN+4kVCkK9coVlVleWMupD1JdwWm53+zdDXgm\n9bW7mdcfVX7UOpGyR53MqjdUXsDDQ0pSCOkmt6nOHKlfjvSB8cMKTntvwKac2JP6\nzRzOtY3Z8VQ2lhjC/AZz/+qDJyqVPeoZyZXOtMisI0S8/ju5iNp89RvTeRmODs3x\n8wIDAQAB\n-----END PUBLIC KEY-----'} 
+2022-12-29 15:58:17,276 - INFO - server_oop.py - Авторизация - "Начало" "ko" 
+2022-12-29 15:58:17,279 - INFO - server_oop.py - Авторизация - "ko" зарегистрирован. 
+2022-12-29 15:58:17,279 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:58:17,279 - DEBUG - server_oop.py - Авторизация - random_message = 7b47c3691d6edc229122215a81d115243f46b4f6e8eb0f94130a24b44df0157ea2cc9aa45b051d9d20652830c9bea08952f3fb0cf765ae165b2375857de4c620 
+2022-12-29 15:58:17,279 - DEBUG - server_oop.py - Авторизация - HMAC-функция сервер = b'Zv\x9d\xbc\xa4\xbc$k\xd7\xb7\x0e\x8a\xa8\xcc\xe5h' 
+2022-12-29 15:58:17,281 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:58:17,281 - DEBUG - server_oop.py - Авторизация - HMAC-функция клиент = b'Zv\x9d\xbc\xa4\xbc$k\xd7\xb7\x0e\x8a\xa8\xcc\xe5h' 
+2022-12-29 15:58:17,281 - DEBUG - server_oop.py - Авторизация - HMAC-сравнение = True 
+2022-12-29 15:58:17,281 - INFO - server_oop.py - Авторизация успех 
+2022-12-29 15:58:17,304 - INFO - server_oop.py - Обработчик - "OK" ответ сервера клиенту "ko" 
+2022-12-29 15:58:17,304 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:58:17,505 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:58:17,505 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'get_contacts', 'time': 1672318697, 'user_login': 'ko'} 
+2022-12-29 15:58:17,509 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:58:17,509 - INFO - server_oop.py - Обработчик - Список контактов пользователя "ko": 400 
+2022-12-29 15:58:29,273 - INFO - server_oop.py - Запуск - Соединение по адресу "('127.0.0.1', 40516)" 
+2022-12-29 15:58:29,474 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:58:29,474 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'presence', 'time': 1672318709, 'type': 'status', 'user': {'account_name': 'pa'}, 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA176+adLxUp7ki2kcQsSH\nHueGX3+E8iVULTeKmiuRuMrALEpHBGG2vy1KdUGx2zmNpOkP3IdchXm4Q3Ry9zNA\nMdu9Br7O23DzklXaudcLoRs0Lc7QN6ATD2HdCwZtvQabqYlFOSiA7/TnrSaM3zFm\nZ/n+w/pIl1jylXAw7mn8JHDIuwsQGC7NfN+d5Ojek/ZFqbW1iU6CSJ4I545xGppE\nY8YoL+WAIjiF+zI7D9Bqlf6F/PY2w6VWRS7jxxjOR5UaR3gN/9EJTqUfhREN0wbD\n6W809xmivPjjJFt5679lHdGbIRS1F3LuRF20W7rPZGNL1gpQ9mIdglxoGtbP400o\nywIDAQAB\n-----END PUBLIC KEY-----'} 
+2022-12-29 15:58:29,474 - INFO - server_oop.py - Авторизация - "Начало" "pa" 
+2022-12-29 15:58:29,476 - INFO - server_oop.py - Авторизация - "pa" зарегистрирован. 
+2022-12-29 15:58:29,476 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:58:29,477 - DEBUG - server_oop.py - Авторизация - random_message = ab74bbcf3c21d1dbabd3d0947dd43efd1493e51ace71e48b7b8103921da40c73c4d4c163f274fd2e4213fbc2d17828f16a7544314a9c409723560ad3e0548607 
+2022-12-29 15:58:29,477 - DEBUG - server_oop.py - Авторизация - HMAC-функция сервер = b'\x88\x8c\x0fO+9\x8d\xb7m\xa8]1\xb14\x89\xf4' 
+2022-12-29 15:58:29,479 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:58:29,479 - DEBUG - server_oop.py - Авторизация - HMAC-функция клиент = b'\x88\x8c\x0fO+9\x8d\xb7m\xa8]1\xb14\x89\xf4' 
+2022-12-29 15:58:29,479 - DEBUG - server_oop.py - Авторизация - HMAC-сравнение = True 
+2022-12-29 15:58:29,479 - INFO - server_oop.py - Авторизация успех 
+2022-12-29 15:58:29,497 - INFO - server_oop.py - Обработчик - "OK" ответ сервера клиенту "pa" 
+2022-12-29 15:58:29,497 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:58:29,698 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:58:29,698 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'get_contacts', 'time': 1672318709, 'user_login': 'pa'} 
+2022-12-29 15:58:29,701 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:58:29,701 - INFO - server_oop.py - Обработчик - Список контактов пользователя "pa": 400 
+2022-12-29 15:58:48,934 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:58:48,935 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'add_contact', 'user_id': 'pa', 'time': 1672318728, 'user_login': 'ko'} 
+2022-12-29 15:58:48,947 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:58:48,947 - INFO - server_oop.py - pa добавлен в список контактов ko 
+2022-12-29 15:58:49,949 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:58:49,949 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'get_contacts', 'time': 1672318729, 'user_login': 'ko'} 
+2022-12-29 15:58:49,956 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:58:49,956 - INFO - server_oop.py - Обработчик - Список контактов пользователя "ko": ['pa'] 
+2022-12-29 15:58:55,366 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:58:55,367 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'add_contact', 'user_id': 'ko', 'time': 1672318735, 'user_login': 'pa'} 
+2022-12-29 15:58:55,379 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:58:55,379 - INFO - server_oop.py - ko добавлен в список контактов pa 
+2022-12-29 15:58:56,381 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:58:56,382 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'get_contacts', 'time': 1672318736, 'user_login': 'pa'} 
+2022-12-29 15:58:56,388 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:58:56,388 - INFO - server_oop.py - Обработчик - Список контактов пользователя "pa": ['ko'] 
+2022-12-29 15:58:58,993 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:58:58,993 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'pubkey', 'time': 1672318738, 'user_login': 'pa'} 
+2022-12-29 15:58:58,996 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:59:01,602 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:59:01,602 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'pubkey', 'time': 1672318741, 'user_login': 'ko'} 
+2022-12-29 15:59:01,604 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:59:27,653 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:59:27,653 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'message', 'time': 1672318767, 'from': 'ko', 'to': 'pa', 'message': 'Wj6zoCXE3VnPsCa0EFO6AyvKk9XIh+JIqCX+3HXPmVyA7G2AYnq/iW3KJcSlAX6jJbCzCYrcY74X33YyXZbNtbGr1vW8pLtrmD4Ya9hze3CccfLazW4PTo1TB7m9rCOFx0fDE0y13KTWgKCMraCVl75e3z0HhKNsJbASc7lUbHZaGaa8G/es1BLYH3UCWXIpHcFmWIWsXzaWUvaVm2udv/l7GHOKHQ+fEHmL16I9GtEXs6VUjqNfa2yLA/i38oE94C4ac165qzYMN9elOgOuWjc0faMkxMBVQ1GEKEd75nPu/N1jBQlUW3NFR85GHFFLY8ElGjwU++hiSuh33JjqUQ=='} 
+2022-12-29 15:59:27,654 - DEBUG - server_oop.py - Обработчик - Запоминаем сообщение: {'action': 'message', 'time': 1672318767, 'from': 'ko', 'to': 'pa', 'message': 'Wj6zoCXE3VnPsCa0EFO6AyvKk9XIh+JIqCX+3HXPmVyA7G2AYnq/iW3KJcSlAX6jJbCzCYrcY74X33YyXZbNtbGr1vW8pLtrmD4Ya9hze3CccfLazW4PTo1TB7m9rCOFx0fDE0y13KTWgKCMraCVl75e3z0HhKNsJbASc7lUbHZaGaa8G/es1BLYH3UCWXIpHcFmWIWsXzaWUvaVm2udv/l7GHOKHQ+fEHmL16I9GtEXs6VUjqNfa2yLA/i38oE94C4ac165qzYMN9elOgOuWjc0faMkxMBVQ1GEKEd75nPu/N1jBQlUW3NFR85GHFFLY8ElGjwU++hiSuh33JjqUQ=='}" 
+2022-12-29 15:59:27,659 - INFO - server_oop.py - write_clients 
+2022-12-29 15:59:27,659 - INFO - server_oop.py - Ответ сервера - "ko" пишет "pa": {'action': 'message', 'time': 1672318767, 'from': 'ko', 'to': 'pa', 'message': 'Wj6zoCXE3VnPsCa0EFO6AyvKk9XIh+JIqCX+3HXPmVyA7G2AYnq/iW3KJcSlAX6jJbCzCYrcY74X33YyXZbNtbGr1vW8pLtrmD4Ya9hze3CccfLazW4PTo1TB7m9rCOFx0fDE0y13KTWgKCMraCVl75e3z0HhKNsJbASc7lUbHZaGaa8G/es1BLYH3UCWXIpHcFmWIWsXzaWUvaVm2udv/l7GHOKHQ+fEHmL16I9GtEXs6VUjqNfa2yLA/i38oE94C4ac165qzYMN9elOgOuWjc0faMkxMBVQ1GEKEd75nPu/N1jBQlUW3NFR85GHFFLY8ElGjwU++hiSuh33JjqUQ=='} 
+2022-12-29 15:59:27,659 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:59:28,862 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:59:28,862 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'message', 'time': 1672318768, 'from': 'pa', 'to': 'ko', 'message': 'ZXedTXH6LuUkhUmuKVAgDZgNFrTcni2pV0z/arlwWp1Nm+Ex7on30aOiN5mr9ZqBmab4l7SS/Jks39alCCj7y0M7gjqeNGBHNG73/XnCHnkbo3aiPoqN3Ewd7Z19kCKcCCQW7RD9XyL4nID8rdPp987TDUcEV/T+zeO32O4tao6sjk+b+PJU+KIBi0aH3aucgJLELl2Tgg0UqqCD2FuSV6YAfIttAanrQrtizcO1U5kr3dgYhP97tFtAK/76h9qKAypo0KhI0rkq1Tcy0XD+sG791hJVUxjCWCeVvcEjcfJNKFYYvbwZYW9Fn6YKK8sB0D68/ijwflusdijzHp3eCA=='} 
+2022-12-29 15:59:28,862 - DEBUG - server_oop.py - Обработчик - Запоминаем сообщение: {'action': 'message', 'time': 1672318768, 'from': 'pa', 'to': 'ko', 'message': 'ZXedTXH6LuUkhUmuKVAgDZgNFrTcni2pV0z/arlwWp1Nm+Ex7on30aOiN5mr9ZqBmab4l7SS/Jks39alCCj7y0M7gjqeNGBHNG73/XnCHnkbo3aiPoqN3Ewd7Z19kCKcCCQW7RD9XyL4nID8rdPp987TDUcEV/T+zeO32O4tao6sjk+b+PJU+KIBi0aH3aucgJLELl2Tgg0UqqCD2FuSV6YAfIttAanrQrtizcO1U5kr3dgYhP97tFtAK/76h9qKAypo0KhI0rkq1Tcy0XD+sG791hJVUxjCWCeVvcEjcfJNKFYYvbwZYW9Fn6YKK8sB0D68/ijwflusdijzHp3eCA=='}" 
+2022-12-29 15:59:28,864 - INFO - server_oop.py - write_clients 
+2022-12-29 15:59:28,864 - INFO - server_oop.py - Ответ сервера - "pa" пишет "ko": {'action': 'message', 'time': 1672318768, 'from': 'pa', 'to': 'ko', 'message': 'ZXedTXH6LuUkhUmuKVAgDZgNFrTcni2pV0z/arlwWp1Nm+Ex7on30aOiN5mr9ZqBmab4l7SS/Jks39alCCj7y0M7gjqeNGBHNG73/XnCHnkbo3aiPoqN3Ewd7Z19kCKcCCQW7RD9XyL4nID8rdPp987TDUcEV/T+zeO32O4tao6sjk+b+PJU+KIBi0aH3aucgJLELl2Tgg0UqqCD2FuSV6YAfIttAanrQrtizcO1U5kr3dgYhP97tFtAK/76h9qKAypo0KhI0rkq1Tcy0XD+sG791hJVUxjCWCeVvcEjcfJNKFYYvbwZYW9Fn6YKK8sB0D68/ijwflusdijzHp3eCA=='} 
+2022-12-29 15:59:28,864 - DEBUG - server_oop.py - JSON - кодирует сообщение клиенту 
+2022-12-29 15:59:55,311 - DEBUG - server_oop.py - JSON - декодирует сообщение серверу 
+2022-12-29 15:59:55,311 - DEBUG - server_oop.py - Чтение запросов - Получено сообщение: {'action': 'exit', 'time': 1672318795, 'account_name': 'ko'} 
+2022-12-29 15:59:55,311 - INFO - server_oop.py - Обработчик - "exit" clients: ko 

@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Client module &#8212; документация My messenger beta 0.9</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Server module" href="server.html" />
+    <link rel="prev" title="Log package" href="log.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="client-module">
+<h1>Client module<a class="headerlink" href="#client-module" title="Permalink to this heading">¶</a></h1>
+<p>Клиентское приложение для обмена сообщениями. Поддерживает
+отправку сообщений пользователям которые находятся в сети.</p>
+<p>Поддерживает аргументы коммандной строки:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">client.py</span> <span class="pre">{имя</span> <span class="pre">сервера}</span> <span class="pre">{порт}</span></code></p>
+<ol class="arabic simple">
+<li><p>{имя сервера} - адрес сервера сообщений.</p></li>
+<li><p>{порт} - порт по которому принимаются подключения</p></li>
+</ol>
+<p>Примеры использования:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">client.py</span></code></p></li>
+</ul>
+<p><em>Запуск приложения с параметрами по умолчанию.</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">client.py</span> <span class="pre">ip_address</span> <span class="pre">some_port</span></code></p></li>
+</ul>
+<p><em>Запуск приложения с указанием подключаться к серверу по адресу ip_address:port</em></p>
+<section id="client-py">
+<h2>client.py<a class="headerlink" href="#client-py" title="Permalink to this heading">¶</a></h2>
+<p>Запускаемый модуль,содержит функционал инициализации приложения.
+Выполняет проверку на корректность номера порта.
+Создаёт клиентокое приложение на основе PyQt5.</p>
+<dl class="simple">
+<dt>client. <strong>createParser</strong> ()</dt><dd><p>Парсер аргументов командной строки, определяет 2 элемента:</p>
+<ul class="simple">
+<li><p>адрес сервера</p></li>
+<li><p>порт</p></li>
+</ul>
+</dd>
+<dt>client. <strong>keys_message</strong> ()</dt><dd><p>Генерация ключей с длинной 2048 bit для шифрований сообщений с помощью алгоритма RSA.</p>
+</dd>
+<dt>client. <strong>client_authenticate</strong> (connection)</dt><dd><p>Аутентификация клиента на удаленном сервисе.</p>
+<ul class="simple">
+<li><p>Параметр connection - сетевое соединение (сокет)</p></li>
+<li><p>secret_key - ключ шифрования, известный клиенту и серверу</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="client-d-b-py">
+<h2>client_d_b.py<a class="headerlink" href="#client-d-b-py" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="client_d_b.ClientBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">client_d_b.</span></span><span class="sig-name descname"><span class="pre">ClientBase</span></span><a class="headerlink" href="#client_d_b.ClientBase" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс - оболочка для работы с базой данных клиента.
+Использует SQLite базу данных, реализован с помощью
+SQLAlchemy ORM и используется декларативный стиль.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="client_d_b.ClientBase.Base">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Base</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client_d_b.ClientBase.Base" title="Ссылка на это определение">¶</a></dt>
+<dd><p>The base class of the class hierarchy.</p>
+<p>When called, it accepts no arguments and returns a new featureless
+instance that has no instance attributes and cannot be given any.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="client_d_b.ClientBase.Message">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client_d_b.ClientBase.Message" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс - отображение для таблицы статистики переданных сообщений.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client_d_b.ClientBase.get_history">
+<span class="sig-name descname"><span class="pre">get_history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client_d_b.ClientBase.get_history" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метод возвращающий историю сообщений с определённым пользователем.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client_d_b.ClientBase.save_message">
+<span class="sig-name descname"><span class="pre">save_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client_d_b.ClientBase.save_message" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метод сохраняющий сообщение в базе данных.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="client-oop-py">
+<h2>client_oop.py<a class="headerlink" href="#client-oop-py" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="client_oop.Recept">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">client_oop.</span></span><span class="sig-name descname"><span class="pre">Recept</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">socket</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">login</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client_oop.Recept" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс реализующий транспортную подсистему клиентского
+модуля. Отвечает за прием сообщений с сервера.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="client_oop.Recept.js_dec">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">js_dec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client_oop.Recept.js_dec" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Чтение JSON-файла</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client_oop.Recept.key_reply">
+<span class="sig-name descname"><span class="pre">key_reply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client_oop.Recept.key_reply" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Публичный ключ с сервера</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client_oop.Recept.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client_oop.Recept.run" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Режим приема сообщений</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="id1">
+<h2>client_oop.py<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="client_oop.Send">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">client_oop.</span></span><span class="sig-name descname"><span class="pre">Send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">socket</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">login</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client_oop.Send" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс реализующий транспортную подсистему клиентского
+модуля. Отвечает за отправку сообщений на сервер.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="client_oop.Send.add_contact">
+<span class="sig-name descname"><span class="pre">add_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add_contact</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client_oop.Send.add_contact" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Добавление контакта в список контактов</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client_oop.Send.contacts">
+<span class="sig-name descname"><span class="pre">contacts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client_oop.Send.contacts" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получение списка контактов</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client_oop.Send.del_contact">
+<span class="sig-name descname"><span class="pre">del_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">del_contact</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client_oop.Send.del_contact" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Удаление контакта из списка контактов</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client_oop.Send.js_enc">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">js_enc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client_oop.Send.js_enc" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Запись в JSON-файл</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client_oop.Send.key_request">
+<span class="sig-name descname"><span class="pre">key_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client_oop.Send.key_request" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Запрос публичного ключа</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client_oop.Send.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client_oop.Send.run" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Режим отправки сообщений</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client_oop.Send.send_message">
+<span class="sig-name descname"><span class="pre">send_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiving</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client_oop.Send.send_message" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Отправка сообщения</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="main-window-py">
+<h2>main_window.py<a class="headerlink" href="#main-window-py" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="client.main_window.ClientMainWindow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">client.main_window.</span></span><span class="sig-name descname"><span class="pre">ClientMainWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database_client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recept_transport</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">send_transport</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">login</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.main_window.ClientMainWindow" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс - основное окно пользователя.
+Содержит всю основную логику работы клиентского модуля.
+Конфигурация окна создана в QTDesigner и загружается из
+конвертированого файла list_client_window.py</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="client.main_window.ClientMainWindow.add_contact">
+<span class="sig-name descname"><span class="pre">add_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add_contact</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.main_window.ClientMainWindow.add_contact" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метод добавляющий контакт в серверную BD.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client.main_window.ClientMainWindow.add_contact_action">
+<span class="sig-name descname"><span class="pre">add_contact_action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.main_window.ClientMainWindow.add_contact_action" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метод обработчик нажатия кнопки «Добавить»</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client.main_window.ClientMainWindow.add_contact_window">
+<span class="sig-name descname"><span class="pre">add_contact_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.main_window.ClientMainWindow.add_contact_window" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метод создающий окно - диалог добавления контакта</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client.main_window.ClientMainWindow.clients_list_update">
+<span class="sig-name descname"><span class="pre">clients_list_update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.main_window.ClientMainWindow.clients_list_update" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метод обновляющий список контактов.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client.main_window.ClientMainWindow.delete_contact_window">
+<span class="sig-name descname"><span class="pre">delete_contact_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.main_window.ClientMainWindow.delete_contact_window" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метод создающий окно удаления контакта.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client.main_window.ClientMainWindow.remove_contact">
+<span class="sig-name descname"><span class="pre">remove_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remove_contact</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.main_window.ClientMainWindow.remove_contact" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метод удаляющий контакт из серверной BD.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client.main_window.ClientMainWindow.select_active_user">
+<span class="sig-name descname"><span class="pre">select_active_user</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.main_window.ClientMainWindow.select_active_user" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метод обработчик события двойного клика по списку контактов.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client.main_window.ClientMainWindow.set_active_user">
+<span class="sig-name descname"><span class="pre">set_active_user</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.main_window.ClientMainWindow.set_active_user" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метод активации чата с собеседником.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="main-chat-py">
+<h2>main_chat.py<a class="headerlink" href="#main-chat-py" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="client.main_chat.MainChat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">client.main_chat.</span></span><span class="sig-name descname"><span class="pre">MainChat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database_client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">send_transport</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recept_transport</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keys</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.main_chat.MainChat" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс - активация чата с собеседником.
+Конфигурация окна создана в QTDesigner и загружается из
+конвертированого файла chat_window.py</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="client.main_chat.MainChat.current_receive">
+<span class="sig-name descname"><span class="pre">current_receive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">receive</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.main_chat.MainChat.current_receive" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция устанавливающяя активного собеседника</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client.main_chat.MainChat.history_list_update">
+<span class="sig-name descname"><span class="pre">history_list_update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.main_chat.MainChat.history_list_update" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метод заполняющий соответствующий QListView
+историей переписки с текущим собеседником.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client.main_chat.MainChat.message_signal">
+<span class="sig-name descname"><span class="pre">message_signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#client.main_chat.MainChat.message_signal" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Слот обработчик поступаемых сообщений, выполняет дешифровку
+поступаемых сообщений и их сохранение в истории сообщений.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="client.main_chat.MainChat.send_message">
+<span class="sig-name descname"><span class="pre">send_message</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.main_chat.MainChat.send_message" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция отправки сообщения текущему собеседнику.
+Реализует шифрование сообщения и его отправку.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="start-dialog-py">
+<h2>start_dialog.py<a class="headerlink" href="#start-dialog-py" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="client.start_dialog.UserNameDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">client.start_dialog.</span></span><span class="sig-name descname"><span class="pre">UserNameDialog</span></span><a class="headerlink" href="#client.start_dialog.UserNameDialog" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс реализующий стартовый диалог с запросом логина и пароля
+пользователя.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="client.start_dialog.UserNameDialog.click">
+<span class="sig-name descname"><span class="pre">click</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.start_dialog.UserNameDialog.click" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метод обрабтчик кнопки ОК.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="add-contact-py">
+<h2>add_contact.py<a class="headerlink" href="#add-contact-py" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="client.add_contact.AddContactDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">client.add_contact.</span></span><span class="sig-name descname"><span class="pre">AddContactDialog</span></span><a class="headerlink" href="#client.add_contact.AddContactDialog" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Диалог добавления пользователя в список контактов.</p>
+</dd></dl>
+
+</section>
+<section id="del-contact-py">
+<h2>del_contact.py<a class="headerlink" href="#del-contact-py" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="client.del_contact.DelContactDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">client.del_contact.</span></span><span class="sig-name descname"><span class="pre">DelContactDialog</span></span><a class="headerlink" href="#client.del_contact.DelContactDialog" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Диалог удаления контакта.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">My messenger</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="log.html">Log package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Client module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#client-py">client.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client-d-b-py">client_d_b.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#client_d_b.ClientBase"><code class="docutils literal notranslate"><span class="pre">ClientBase</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#client-oop-py">client_oop.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#client_oop.Recept"><code class="docutils literal notranslate"><span class="pre">Recept</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">client_oop.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#client_oop.Send"><code class="docutils literal notranslate"><span class="pre">Send</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#main-window-py">main_window.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#client.main_window.ClientMainWindow"><code class="docutils literal notranslate"><span class="pre">ClientMainWindow</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#main-chat-py">main_chat.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#client.main_chat.MainChat"><code class="docutils literal notranslate"><span class="pre">MainChat</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#start-dialog-py">start_dialog.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#client.start_dialog.UserNameDialog"><code class="docutils literal notranslate"><span class="pre">UserNameDialog</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#add-contact-py">add_contact.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#client.add_contact.AddContactDialog"><code class="docutils literal notranslate"><span class="pre">AddContactDialog</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#del-contact-py">del_contact.py</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#client.del_contact.DelContactDialog"><code class="docutils literal notranslate"><span class="pre">DelContactDialog</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">Server module</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="log.html" title="предыдущая глава">Log package</a></li>
+      <li>Next: <a href="server.html" title="следующая глава">Server module</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, koss.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.0.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/client.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
